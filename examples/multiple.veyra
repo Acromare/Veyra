@@ -1,0 +1,5 @@
+function discount(): double
+    return 0.8
+
+function main(): double
+    return 42

@@ -1,0 +1,3 @@
+function main(): double
+    let base = 21
+    return base * 2

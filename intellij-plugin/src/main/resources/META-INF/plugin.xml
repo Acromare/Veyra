@@ -1,0 +1,11 @@
+<idea-plugin>
+    <id>io.veyralang.intellij</id>
+    <name>Veyra Language</name>
+    <vendor>Veyra contributors</vendor>
+    <description>Syntax highlighting and .veyra file support for Veyra scripts.</description>
+    <depends>com.intellij.modules.lang</depends>
+    <extensions defaultExtensionNs="com.intellij">
+        <fileTypeFactory implementation="io.veyralang.intellij.VeyraFileTypeFactory"/>
+        <lang.syntaxHighlighterFactory language="Veyra" implementationClass="io.veyralang.intellij.VeyraSyntaxHighlighterFactory"/>
+    </extensions>
+</idea-plugin>

@@ -1,0 +1,6 @@
+function priceDecision(order: Order, customer: Customer): double
+    let discount = 1.0
+    if customer.vip && order.amount >= 1000
+        discount = 0.8
+        emit applyDiscount(order.id, discount)
+    return order.amount * discount

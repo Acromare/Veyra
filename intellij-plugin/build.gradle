@@ -1,0 +1,32 @@
+plugins {
+    id 'org.jetbrains.intellij.platform' version '2.2.1'
+}
+
+group = 'io.veyralang'
+version = '0.1.0'
+
+repositories {
+    mavenCentral()
+    intellijPlatform { defaultRepositories() }
+}
+
+dependencies {
+    intellijPlatform { intellijIdeaCommunity('2024.3.5') }
+}
+
+intellijPlatform {
+    pluginConfiguration {
+        id = 'io.veyralang.intellij'
+        name = 'Veyra Language'
+        version = project.version
+        description = 'Syntax highlighting and .veyra file support for the Veyra business scripting language.'
+        ideaVersion { sinceBuild = '243'; untilBuild = '262.*' }
+        vendor { name = 'Veyra contributors' }
+    }
+}
+
+// This plugin currently exposes no searchable IDE settings. Skipping the
+// optional indexer keeps packaging deterministic on headless/CI machines.
+tasks.named('buildSearchableOptions') {
+    enabled = false
+}

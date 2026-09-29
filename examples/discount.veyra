@@ -1,0 +1,5 @@
+function calc(order: Order, user: User): double
+    let base = order.amount
+    if user.vip && base > 1000
+        return base * 0.8
+    return base
