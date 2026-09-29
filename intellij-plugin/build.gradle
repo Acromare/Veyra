@@ -16,7 +16,7 @@ dependencies {
 
 intellijPlatform {
     pluginConfiguration {
-        id = 'io.veyralang.intellij'
+        id = 'io.veyralang.veyra'
         name = 'Veyra Language'
         version = project.version
         description = 'Syntax highlighting and .veyra file support for the Veyra business scripting language.'

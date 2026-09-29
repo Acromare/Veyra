@@ -1,5 +1,5 @@
 <idea-plugin>
-    <id>io.veyralang.intellij</id>
+    <id>io.veyralang.veyra</id>
     <name>Veyra Language</name>
     <vendor>Veyra contributors</vendor>
     <description>Syntax highlighting and .veyra file support for Veyra scripts.</description>
